@@ -1,0 +1,278 @@
+body {
+    background-image: url('grain.99e6987b.png');
+    height: 100%;
+    color="#b3cccc";
+    font-family: 'Bangers', cursive;
+
+}
+.topnav {
+  overflow: hidden;
+  background-color:  #232324;
+}
+
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #80aaff;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+.center{
+  text-align: center;
+}
+
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 18px 0px
+}
+
+.btn {
+  background-color: white;
+  border: 10px solid:black;
+  color: black;
+  display: block;
+  padding: 20px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: larger;
+  font-weight: bolder;
+  margin-top: 30px;
+  cursor: pointer;
+  letter-spacing:5px
+}
+
+.btn2 {
+  background-color: white;
+}
+
+.btn3 {
+  background-color: white;
+}
+.gohome{
+  position: absolute;
+  color: #1a1a00;
+  background: #ffffff;
+  border-radius: 8px;
+  margin-top: 15px;
+  padding: 5px 15px 5px 15px;
+
+}
+
+
+
+@mixin transition {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin clear {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin box-size {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin transition {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin fade {
+  -moz-transition: all 1s ease-in;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+
+@mixin opacity {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  @include fade;
+}
+
+@mixin corners ($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  -khtml-border-radius: $radius;
+}
+
+.wrappper {
+  @include clear;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+canvas {
+  color: black;
+  border: black dashed 5px;
+  padding: 15px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Bangers', cursive;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin: 5px 0;
+}
+
+h1 {
+  font-size: 3.0em;
+}
+
+
+p {
+  font-size: 2.6sem;
+}
+
+#alphabet {
+  @include clear;
+  margin: 15px auto;
+  padding: 0;
+  max-width: 900px;
+}
+
+#alphabet li {
+  float: left;
+  margin: 0 10px 10px 0;
+  list-style: none;
+  width: 35px;
+  height: 45px;
+  padding-top: 10px;
+  background: white;
+  color: black;
+  cursor: pointer;
+  @include corners(5px);
+  border: solid 1px white;
+
+  &:hover {
+    background: white;
+    border: solid 1px $white;
+    color: black;
+  }
+}
+
+#my-word {
+  margin: 0;
+  display: block;
+  padding: 0;
+  display: block;
+}
+
+#my-word li {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 1.6em;
+}
+
+.active {
+  @include opacity;
+  cursor: default;
+
+  &:hover {
+    @include fade;
+    @include opacity;
+  }
+}
+
+#mylives {
+  font-size: 1.6em;
+  text-align: center;
+  display: block;
+}
+
+button {
+  @include corners (5px);
+  background: white;
+  color: black;
+  border: solid 1px white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 18px 10px;
+  width: 180px;
+  margin: 10px;
+  outline: none;
+
+  &:hover {
+    @include transition;
+    background: white;
+    border: solid 1px white;
+    color: black;
+  }
+}
+
+@media (max-width: 767px) {
+  #alphabet {
+    padding: 0 0 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  #alphabet {
+    padding: 0 0 0 25px;
+  }
+
+  .navbar {
+    font-family: Arial black, Helvetica, sans-serif;
+    width: 200%;
+    background-color: #555;
+    overflow: auto;
+  }
+
+
+}
+
+#nameu{
+  display: none;
+}
+#scoreset{
+  display: none;
+}
+
+.margtop30{
+  margin-top:30px;
+}
+
+table{
+  font-size: 5vh;
+  width: 100%;
+}
+
+th{
+  border: 3px solid #f2f2f3; 
+}
+
+tr,td{
+  border: 3px dashed #f2f2f3;
+}
