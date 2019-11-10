@@ -14,3 +14,5 @@ HTML5,CSS3,JavaScript,PHP,Mysql
   6. Edit scoreboard.php and uscore.php and update database credentials
   7. Goto http://localhost/hangman/
 
+# Demo
+  http://hangmangame.rf.gd/
